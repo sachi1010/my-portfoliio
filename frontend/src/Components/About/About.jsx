@@ -39,6 +39,7 @@ const About = () => {
                     </p>
                 </div>
             </div>
+            
             <div className="about-achivements" data-aos="slide-up">
                 <div className="about-achievement">
                     <h2>Full Stack Certificate</h2>
@@ -49,7 +50,7 @@ const About = () => {
                         </button>
                     </div>
                 </div>
-                <hr />
+                {/* <hr />
                 <div className="about-achievement">
                     <h2>Sports Certificate</h2>
                     <div className="certificate-container">
@@ -58,7 +59,7 @@ const About = () => {
                             View Certificate
                         </button>
                     </div>
-                </div>
+                </div> */}
 
                 {popupImage && (
                     <div className="popup-overlay" onClick={closePopup}>
