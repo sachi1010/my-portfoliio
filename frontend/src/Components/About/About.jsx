@@ -26,7 +26,7 @@ const About = () => {
       </div>
       <div className="about-sections">
                 <div className="about-left" data-aos="zoom-in">
-                    <img src="http://localhost:5000/public/heroimg.png" alt="" />
+                    <img src="https://my-portfolio-backend-k3s2.onrender.com/public/heroimg.png" alt="" />
                 </div>
                 <div className="about-right" data-aos="fade-In">
                     <p>
