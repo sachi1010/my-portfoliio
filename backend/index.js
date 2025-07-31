@@ -3,6 +3,11 @@ const mongoose = require('mongoose');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 require('dotenv').config();
+const path = require('path');
+const fs = require('fs');
+const projectData = require('./data/Projects');
+
+
 
 const ContactMessage = require('./models/contactmessage');
 
@@ -58,6 +63,35 @@ app.post('/api/contact', async (req, res) => {
     res.status(500).json({ error: "Failed to send/save message" });
   }
 });
+
+
+// Serve static files from the public folder
+app.use('/public', express.static(path.join(__dirname, 'public')));
+
+app.get('/api/resume', (req, res) => {
+  const filePath = path.join(__dirname, 'public', 'SACHITHANANTHAN B.pdf'); // use full correct filename
+
+  if (!fs.existsSync(filePath)) {
+    return res.status(404).send("Resume file not found.");
+  }
+
+  res.download(filePath, 'Sachithananthan_Resume.pdf', (err) => {
+    if (err) {
+      console.error("Download error:", err);
+      res.status(500).send("Error sending resume.");
+    }
+  });
+});
+
+
+
+// API route to get project data
+app.get('/api/projects', (req, res) => {
+  res.json(projectData);
+});
+
+
+
 
 // Start server
 const PORT = process.env.PORT || 5000;

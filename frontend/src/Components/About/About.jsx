@@ -1,7 +1,6 @@
 import React from 'react'
 import './About.css'
 import theme_pattern from '../../assets/theme_pattern.svg'
-import profile_img from '../../assets/heroimg.png'
 import full_stack from '../../assets/full_stack.png'
 import { useState } from 'react'
 
@@ -27,7 +26,7 @@ const About = () => {
       </div>
       <div className="about-sections">
                 <div className="about-left" data-aos="zoom-in">
-                    <img src={profile_img} alt="" />
+                    <img src="http://localhost:5000/public/heroimg.png" alt="" />
                 </div>
                 <div className="about-right" data-aos="fade-In">
                     <p>
