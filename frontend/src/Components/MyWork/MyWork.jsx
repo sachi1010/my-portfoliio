@@ -53,7 +53,7 @@ const MyWork = () => {
   const [projects, setProjects] = useState([]);
 
  useEffect(() => {
-  fetch("http://localhost:5000/api/projects")
+  fetch("https://my-portfolio-backend-k3s2.onrender.com/api/projects")
     .then(res => res.json())
     .then(data => {
       console.log("📦 Project data from backend:", data);
