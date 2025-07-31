@@ -1,0 +1,153 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin: 80px 170px;
+}
+
+.skill-title {
+  position: relative;
+}
+
+.skill-title h1 {
+  padding: 0px 30px;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.skill-title img {
+  position: absolute;
+  bottom: 0;
+  right: 0px;
+  z-index: -1;
+  height: 40px;
+}
+
+.skill-section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 40px;
+}
+
+.skill-left-container,
+.skill-right-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.skills-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.skills-list:hover {
+  transform: scale(1.03);
+}
+
+.skills-list p {
+  flex-shrink: 0;
+  width: 150px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #D8D8D8;
+  margin: 0;
+  text-align: left;
+}
+
+.skill-bar {
+  flex-grow: 1;
+  height: 10px;
+  background-color: #4a4b4b42;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.filled-bar {
+  height: 100%;
+  background: linear-gradient(264deg, #da7c25 -5.09%, #B923E1 106.28%);
+  transition: width 0.6s ease-in-out;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .skills {
+    margin: 50px 30px;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .skill-title h1 {
+    font-size: 28px;
+    padding: 0px 150px;
+  }
+
+  .skill-title img {
+    width: 80px;
+    right: 125px;
+    top: 5px;
+    height: 30px;
+  }
+
+  .skill-section {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0px 10px 0px 0px;
+  }
+
+  .skills-list p {
+    width: 120px;
+    font-size: 18px;
+  }
+  .skills-list{
+    flex-direction: column;
+    align-items: normal;
+  }
+}
+
+
+/* -------- Tablet Responsive Styles (768px–1024px) -------- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .skills {
+    margin: 60px 60px;
+    gap: 70px;
+    align-items: center;
+  }
+
+  .skill-title h1 {
+    font-size: 50px;
+    padding: 0px 40px;
+  }
+
+  .skill-title img {
+    height: 35px;
+    right: 40px;
+  }
+
+  .skills-list p {
+    width: 150px;
+    font-size: 20px;
+  }
+  .skills-list{
+    flex-direction: column;
+    align-items: normal;
+  }
+
+  .skill-bar {
+    height: 10px;
+  }
+  .skill-left-container{
+    margin:0px 30px;
+  }
+  .skill-right-container{
+    margin:0px 30px;
+  }
+}

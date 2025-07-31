@@ -1,0 +1,268 @@
+.projects {
+  padding: 60px 170px;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+   
+}
+
+.project-title{
+    position: relative;
+}
+.project-title h1{
+    font-size: 60px;
+    padding: 0px 30px ;
+    font-weight: 600;
+}
+.project-title img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    height: 50px;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Card layout */
+.project-card {
+  display: flex;
+  color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  flex-wrap: wrap;
+  transition: 0.3s ease-in-out;
+  height: 350px;
+}
+
+.project-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.project-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit:fill;
+  border-radius: 16px;
+}
+
+.project-content {
+  flex: 1;
+  padding: 30px;
+  min-width: 300px;
+}
+.projects .bi-github{
+  color: #c80afd;
+}
+
+.project-content h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+  background: linear-gradient(270deg,#da7c25 80%,#B923E1 100%);
+     background-clip: text;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+
+.project-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #D8D8D8;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: #D8D8D8;
+}
+
+.badge {
+  background-color: #1e293b;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 16px;
+}
+
+.project-buttons .btn {
+  text-decoration: none;
+  padding: 10px 30px;
+  margin-right: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.btn.live {
+  background: linear-gradient(267deg, #da7c25 0.36%, #B923E1 102.06%);
+  color: white;
+  transition: 0.3s;
+}
+.btn.live:hover{
+     transform: scale(1.05);
+     color: black;
+}
+.btn.code {
+  color: white;
+  border: 2px solid white;
+}
+
+.btn.code:hover{
+  border: 2px solid #B923E1;
+  color: #B923E1;
+}
+.btn.code:hover .bi-github{
+  color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .project-content h2 {
+    font-size: 24px;
+  }
+ 
+  .project-content p {
+    font-size: 15px;
+  }
+
+  .project-buttons .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .project-card,
+  .project-card.reverse {
+    flex-direction: column;
+  }
+  .project-title h1{
+    font-size: 28px;
+  }
+  .project-title img{
+    width: 100%;
+    height: 30px;
+    left: 80px;
+  }  
+
+  .projects{
+    padding: 20px 90px;
+  }
+
+  .project-image {
+    width: 70%;
+    min-width: unset;
+    height: 130px;
+    text-align: center;
+  }
+  .project-card{
+    text-align: center;
+    border: 1px solid #B923E1;
+     padding: 0px 0px;
+  }
+  .project-image img{
+    margin-left: 30px;
+    margin-top: 10px;
+  }
+
+  .project-content {
+    padding: 10px 10px;
+  }
+
+  .project-content h2 {
+    font-size: 22px;
+  }
+
+  .project-content p {
+    font-size: 14px;
+  }
+
+  .badge {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .project-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .project-buttons .btn {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-title h1 {
+    font-size: 28px;
+  }
+  .project-title img{
+    width: 100%;
+    height: 30px;
+    left: 80px;
+  }
+  .projects{
+    padding: 20px 30px 0px 30px;
+  }
+  
+  .project-image {
+    width: 80%;
+    height: 90px;
+    border-radius: 4px;
+  }
+  .project-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 4px;
+    margin-right: 0px;
+  }
+
+  .project-content h2 {
+    font-size: 18px;
+    background: linear-gradient(270deg,#da7c25 20%,#B923E1 100%);
+     background-clip: text;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+  }
+
+  .project-content p {
+    font-size: 13px;
+  }
+
+  .badge {
+    font-size: 11px;
+  }
+
+  .project-buttons .btn {
+    font-size: 13px;
+    padding: 6px 10px;
+
+  }
+  .project-card{
+    border: 1px solid #B923E1;
+    /* padding: 20px 0px; */
+    text-align: center;
+    
+  }
+  .btn.live{
+    padding: 6px 0px;
+  }
+ 
+}
